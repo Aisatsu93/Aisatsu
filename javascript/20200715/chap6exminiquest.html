@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        // 1번 문제
+        var input = prompt('가위 바위 보', '');
+        var rand = Math.floor(Math.random() * 2) + 1;
+        var computer = '';
+        var output = '';
+        switch (rand)
+        {
+            case 1:
+            {
+                computer = '가위';
+                break;
+            }
+            case 2:
+            {
+                computer = '바위';
+                break;
+            }
+            case 3:
+            {
+                computer = '보';
+                break;
+            }
+            default:
+            {
+                break;
+            }
+        }
+
+        if (input == '가위')
+        {
+            if (computer == '가위')
+            {
+                output = '비겼습니다.';
+            }
+            else if (computer == '바위')
+            {
+                output = '졌습니다.';
+            }
+            else
+            {
+                output = '이겼습니다.';
+            }
+        }
+        else if (input == '바위')
+        {
+            if (computer == '가위')
+            {
+                output = '이겼습니다.';
+            }
+            else if (computer == '바위')
+            {
+                output = '비겼습니다.';
+            }
+            else
+            {
+                output = '졌습니다.';
+            }
+        }
+        else if (input == '보')
+        {
+            if (computer == '가위')
+            {
+                output = '졌습니다.';
+            }
+            else if (computer == '바위')
+            {
+                output = '이겼습니다.';
+            }
+            else
+            {
+                output = '비겼습니다.';
+            }
+        }
+        else
+        {
+            alert('잘못 입력하셨습니다.')
+        }
+
+        alert('입력 : ' + input + '\n' + '출력 : ' + computer + ' -> ' + output);
+
+        // 2번 문제
+        var numbers = [];
+        for (var i = 0; i < 4; i++)
+        {
+            numbers[i] = Math.floor(Math.random()*9);
+        
+            for (var j = 0; j < i ; j++)
+            {
+                if (numbers[i] == numbers[j])
+                {
+                    i--;
+                    break;
+                }
+            }
+        }
+        
+        alert(numbers);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

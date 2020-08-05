@@ -1,0 +1,23 @@
+package zoneddatetimedemo1;
+
+import java.time.Duration;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+
+public class ZonedDateTimeDemo1
+{
+
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+		ZonedDateTime here = ZonedDateTime.now();
+		System.out.println(here);
+		
+		ZonedDateTime paris = ZonedDateTime.of(here.toLocalDateTime(), ZoneId.of("Europe/Paris"));
+		System.out.println(paris);
+		
+		Duration diff = Duration.between(here, paris);
+		System.out.println(diff);
+	}
+
+}

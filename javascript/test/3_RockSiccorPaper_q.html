@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+
+        var input = prompt('가위 바위 보!' , '');
+
+        var myChoice = '';
+        //0=가위, 1=바위, 2=보
+        if (input == '가위')
+        {
+            myChoice += 0;
+        }
+        else if (input == '바위')
+        {
+            myChoice += 1;
+        }
+        else if (input == '보')
+        {
+            myChoice += 2;
+        }
+        var computerChoice = Math.floor(Math.random()*3);
+
+        console.log('0=가위, 1=바위, 2=보' + '\n' + '유저: '+myChoice+ '컴퓨터: ' +computerChoice)
+        if (myChoice == computerChoice) {
+            console.log('무승부');
+        } else if (myChoice == 0 && computerChoice == 1) {
+            console.log('패배');
+        } else if (myChoice == 0 && computerChoice == 2) {
+            console.log('승리');
+        } else if (myChoice == 1 && computerChoice == 0) {
+            console.log('승리');
+        } else if (myChoice == 1 && computerChoice == 2) {
+            console.log('패배');
+        } else if (myChoice == 2 && computerChoice == 0) {
+            console.log('패배');
+        } else if (myChoice == 2 && computerChoice == 1) {
+            console.log('승리');
+        } else { console.log('잘못된 결과'); }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

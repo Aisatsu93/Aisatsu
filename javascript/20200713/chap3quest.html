@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 문제 1
+
+        var input = prompt("입력", '');
+        if (input == '안녕')
+        {
+            alert("안녕하세요");
+        }
+        else if (input == '잘자' || input == '잘 자')
+        {
+            alert("안녕히 주무세요");
+        }
+        else
+        {
+            alert("False")
+        }
+
+
+        // 문제 2
+
+        var input2 = prompt("입력", '');
+        if (input2.indexOf("안녕") != -1)
+        {
+            alert("Pass");
+        }
+        else
+        {
+            alert("인사를 안 하다니");
+        }
+
+        // 문제 3
+
+        var input3 = Number(prompt('숫자입력', ''));
+        if (input3 % 4 == 0)
+        {
+            alert("4로 나눌 수 있는 숫자입니다.");
+        }
+        else
+        {
+            alert("4로 나눌 수 없는 숫자입니다.");
+        }
+
+        // 문제 4
+        
+        var input4 = Number(prompt("숫자 입력", ''));
+        if  (input4 > 0)
+        {
+            alert("양수입니다");
+        }
+        else if (input4 == 0)
+        {
+            alert("0입니다");
+        }
+        else if (input4 < 0)
+        {
+            alert("음수입니다");
+        }
+        else
+        {
+            alert("False");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

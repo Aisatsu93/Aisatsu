@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        if (false) {
+            function callThreeTime(callback) {
+                for (var i = 0; i < 3; i++) {
+                    callback();
+                }
+            }
+
+            var test = function () {
+                alert("흐아아아아암수");
+            }
+            callThreeTime(test);
+
+            callThreeTime(function () {
+                alert("꾿웨");
+            });
+        }
+
+        function returnFunction() {
+            return function () {
+                alert("Hi DJ");
+            }
+        }
+        returnFunction();
+        /*
+        function()
+        {
+            alert("Hi DJ");
+        }
+        */
+        alert(returnFunction());
+        returnFunction()();
+
+        function test(name)
+        {
+            var output = "Hey" + name;
+            return function()
+            {
+                alert(output);
+            }
+        }
+
+        var test_1 = test('web');
+        /* 
+        test('web')
+        function()
+        {
+            alert("Hey" + 'web');
+        }
+        */
+        test_1();
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

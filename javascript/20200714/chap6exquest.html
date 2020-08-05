@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var input = Number(prompt('설탕의 무게는?', ''));
+        var count = 0;
+
+        while (true)
+        {
+            if (input % 5 == 0)
+            {
+                count += input / 5;
+                alert(count);
+                break;
+            }
+            input -= 3;
+            count++;
+
+            if (input < 0)
+            {
+                alert('-1');
+                break;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 원래 하나의 파라메터만 받지만 추가적으로 파라메터를 받으면 그냥 무시함
+        alert("Hello");
+        alert("111", "222");
+        alert();
+        prompt("하나만 입력해보자구요");
+
+        // 파라메터의 개수에 따라 예외처리가 되는 애들도 있습니다.
+        var array1 = Array(); // 빈 어레이
+        var array2 = Array(5); // 5칸짜리 빈 어레이
+        var array3 = Array(1,2,3,4); // 4칸짜리 어레이, 안에 내용은 1,2,3,4
+        var array4 = Array(1,2,3,4,5,6,7,8,9,10);
+        var array5 = [1];
+        var array6 = [1,2,3,4];
+
+        alert(array1);
+        alert(array2);
+        alert(array3);
+        alert(array4);
+        alert(array5);
+        alert(array6);
+        
+        function GabyunInJa()
+        {
+            if (arguments.length == 0)
+            {
+                return 0;
+            }
+            var sum = 0;
+            for (var i = 0; i <arguments.length; i++)
+            {
+                sum += arguments[i];
+            }
+            return sum;
+        }
+
+        alert(GabyunInJa());
+        alert(GabyunInJa(1,2,3,4,5));
+        alert(GabyunInJa(1,2,3));
+        alert(GabyunInJa(1,2,3,4,5,6,7,8,9,10))
+
+        function GabyunInJaNoReturn()
+        {
+            if (arguments.length == 0)
+            {
+                alert(0);
+                return;
+            }
+            var sum = 0;
+            for (var i = 0; i <arguments.length; i++)
+            {
+                sum += arguments[i];
+            }
+            alert(sum);
+        }
+        
+        GabyunInJaNoReturn();
+        GabyunInJaNoReturn(1,2,3,4,5);
+        GabyunInJaNoReturn(1,2,3);
+        GabyunInJaNoReturn(1,2,3,4,5,6,7,8,9,10);
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

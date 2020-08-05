@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('img').first().appendTo('body');
+            setInterval(function () {
+                // 첫 번째 이미지를 마지막으로 보냅니다.
+                $('img').first().appendTo('body');
+            }, 2000);
+        });
+    </script>
+</head>
+<body>
+    <img src="fumika.png" />
+    <img src="rin.png" />
+    <img src="sin.png" />
+    <img src="ranko.png" />
+    <img src="konomi.png" />
+</body>
+</html>

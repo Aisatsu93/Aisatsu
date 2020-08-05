@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+        // 변수를 선언합니다.
+        var child = window.open('http://hanbit.co.kr', 'child', 'width=300, height=200');
+        if (child)
+        {
+            // 출력합니다.
+            child.document.write('<h1>From Parent Window</h1>');
+        }
+        else
+        {
+            alert('팝업 차단 해제해라');
+        }
+        // open();
+        // alert('aaa');
+        // location = 'http://www.naver.com';
+        location.replace('http://www.naver.com');
+    </script>
+</body>
+</html>

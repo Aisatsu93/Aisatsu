@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1번 문제
+        function Product(name, wihgt, price)
+        {
+            this.이름 = name;
+            this.무게 = wihgt;
+            this.가격 = price;
+
+            this.calculate = function(x)
+            {
+                return (x / 100) * this.가격;
+            };
+        }
+
+        var product = new Product("돼지삼겹살", 100, 1690);
+        alert(product.calculate(200) + '원');
+
+        // 2번 문제
+        let number = 273;
+        number.prototype.print = function () 
+        {
+            console.log(this.valueOf(this));
+        };
+
+        number.print();
+        number.print();
+        number.print();
+
+        // 3번 문제
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

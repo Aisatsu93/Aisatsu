@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var product =
+        {
+            제품명 : '망고',
+            유형 : '과일',
+            price : 10000,
+        } /*123;*/
+
+        alert(product);
+        alert(product.price);
+        alert(product['제품명']);
+
+        var obj =
+        {
+            number : 2,
+            string : 'hi',
+            bool : true,
+            array : [1,2,3],
+            method : function() {alert("ㅎㅇ")}
+        }
+        obj.method();
+        alert(obj.array[1]);
+
+        var output = '';
+        for (var key in obj)
+        {
+            output += key + " : " + obj[key] + '\n';
+        }
+        alert(output);
+
+
+        var student =
+        {
+            이름 : '홍동휘',
+            자바 : 100,
+            씨샵 : 100,
+            output2 : '분노의 파리채'
+        }
+        var student2 =
+        {
+            이름 : 'HongDongHwi',
+            자바 : 100,
+            씨샵 : 50
+        }
+        // in 키워드
+        // 해당 키가 객체안에 있는지 여부 체크
+        alert('이름' in student);
+        alert('이름' in student2);
+
+        var output2 = '';
+        with (student)
+        {
+            window.output2 += '이름: ' + 이름 + '\n';
+            window.output2 += '자바: ' + 자바 + '\n';
+            window.output2 += '씨샵: ' + 씨샵 + '\n';
+        }
+        alert(output2);
+
+        student.성별 = '남자';
+        alert(student.성별);
+
+        var output3 = '';
+        for (var key2 in student)
+        {
+            output3 += key2 + " : " + student[key2] + '\n';
+        }
+        alert(output3);
+
+        delete(student.output2);
+        if(false)
+        {
+            var output4 = '';
+            for (var key3 in student)
+            {
+             output4 += key3 + " : " + student[key3] + '\n';
+            }
+            alert(output4);
+        }
+        student.toString = function()
+        {
+            var ooo = '';
+            for (var key4 in this)
+            {
+                if(key != 'toString')
+                {
+                    ooo += key4 + '       ' + this[key4] + '\n';
+                }
+            }
+            return ooo;
+        }
+
+        alert(studnet.toString);
+        alert(student);
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

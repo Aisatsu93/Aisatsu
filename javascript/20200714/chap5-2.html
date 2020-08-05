@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function name()
+        {
+            alert('B');
+        }
+
+        function name()
+        {
+            alert('BBQ');
+        }
+
+        name();
+
+        // 안됨
+        // var fff = function()
+        // {
+        //     alert('함수A');
+        // }
+        // var fff = function()
+        // {
+        //     alert('함수B');
+        // }
+
+        fu(); // 3
+        function fu() // 1
+        {
+            alert('하암');
+        }
+        function fu() // 2
+        {
+            alert('수수수수수수수');
+        }
+
+        // 익명함수보다 선언함수 실행은 먼저됨
+
+        var fx = function() // 익명함수
+        {
+            alert('햄스터');
+        }
+        function fx() //선언 함수
+        {
+            alert('터스햄');
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

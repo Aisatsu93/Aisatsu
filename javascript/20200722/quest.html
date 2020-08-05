@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button
+        {
+            margin: 5px;
+        }
+
+        #cancel, #present, #ans
+        {
+             padding-top: 5px;
+             padding-left: 20px;
+             padding-right: 20px;
+             padding-bottom: 5px;
+             
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+
+            
+            $('#0').on('click', function () {
+                $('h1').append(0);
+                $(this).off();
+            });
+            $('#1').on('click', function () {
+                $('h1').append(1);
+                $(this).off();
+            });
+            $('#2').on('click', function () {
+                $('h1').append(2);
+                $(this).off();
+            });
+            $('#3').on('click', function () {
+                $('h1').append(3);
+                $(this).off();
+            });
+            $('#4').on('click', function () {
+                $('h1').append(4);
+                $(this).off();
+            });
+            $('#5').on('click', function () {
+                $('h1').append(5);
+                $(this).off();
+            });
+            $('#6').on('click', function () {
+                $('h1').append(6);
+                $(this).off();
+            });
+            $('#7').on('click', function () {
+                $('h1').append(7);
+                $(this).off();
+            });
+            $('#8').on('click', function () {
+                $('h1').append(8);
+                $(this).off();
+            });
+            $('#9').on('click', function () {
+                $('h1').append(9);
+                $(this).off();
+            });
+
+            $('#cancel').on('click', function () {
+                $('h1').empty();
+            });
+
+            
+
+            var array = [];
+
+            for (var i = 0; i < 3; i++) {
+                var rand = (Math.floor(Math.random() * 10));
+                array[i] = rand;
+                for (var j = 0; j < i; j++) {
+                    if (array[i] == array[j]) {
+                        i--;
+                        break;
+                    }
+                }
+            }
+
+
+
+            $('#ans').on('click', function () {
+                $('#ans').append(array);
+                $(this).off();
+            });
+
+
+            $('#present').on('click', function () {
+
+                var array2 = [];
+                for (var i = 0; i < 3; i++)
+                {
+                    array2.push($('h1').text().charAt(i));
+                }
+                var strike = 0;
+                var ball = 0;
+                var out = '';
+                for (var i = 0; i < 3; i++)
+                {
+                    if (array[i] == array2[i])
+                    {
+                        strike += 1;
+                    }
+                    else
+                    {
+                        for (var j = i; j < 3; j++)
+                        {
+                            if (array[i] == array[j])
+                            {
+                                ball += 1;
+                            }
+                        }
+                    }
+                }
+                if (strike == 3)
+                {
+                    out = 'Strike Out!';
+                }
+                // for (var i = 0; i < 3; i++)
+                // {
+                //     array2.push($('h1').text().charAt(i));
+                // }
+
+                $('.two').append('<h2>[' + $('h1').text() + '] ' + strike + 's ' + ball + 'b ' + out + '</h2>');
+
+                $('h1').empty();
+            });
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1></h1>
+    </div>
+    <div>
+        <button id="0">0</button>
+        <button id="1">1</button>
+        <button id="2">2</button>
+        <button id="3">3</button>
+        <button id="4">4</button>
+    </div>
+    <div>
+        <button id="5">5</button>
+        <button id="6">6</button>
+        <button id="7">7</button>
+        <button id="8">8</button>
+        <button id="9">9</button>
+    </div>
+
+    <div>
+        <button id="cancel">취소</button>
+        <button id="present">제출</button>
+    </div>
+
+    <div>
+        <button id="ans">정답은?<br></button>
+    </div>
+
+    <div class="two">
+
+    </div>
+
+</body>
+
+</html>

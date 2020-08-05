@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+
+            var input = Number(prompt('대수 값은?', '10000'));
+
+            var onecount = 0;
+            var twocount = 0;
+            var threecount = 0;
+            var fourcount = 0;
+            var fivecount = 0;
+            var sixcount = 0;
+
+            for (var i = 0; i < input; i++)
+            {
+                var rand = Math.floor(Math.random() * 6) + 1;
+                if (rand == 1)
+                {
+                    onecount += 1;
+                }
+                else if (rand == 2)
+                {
+                    twocount += 1;
+                }
+                else if (rand == 3)
+                {
+                    threecount += 1;
+                }
+                else if (rand == 4)
+                {
+                    fourcount += 1;
+                }
+                else if (rand == 5)
+                {
+                    fivecount += 1;
+                }
+                else
+                {
+                    sixcount += 1;
+                }
+            }
+
+            $('.one').append(onecount + '번 나왔으며');
+            $('.two').append(twocount + '번 나왔으며');
+            $('.three').append(threecount + '번 나왔으며');
+            $('.four').append(fourcount + '번 나왔으며');
+            $('.five').append(fivecount + '번 나왔으며');
+            $('.six').append(sixcount + '번 나왔으며');
+
+            $('.one-percent').append('확률은' + (onecount/input * 100).toFixed(2) + '% 이다.');
+            $('.two-percent').append('확률은' + (twocount/input * 100).toFixed(2) + '% 이다.');
+            $('.three-percent').append('확률은' + (threecount/input * 100).toFixed(2) + '% 이다.');
+            $('.four-percent').append('확률은' + (fourcount/input * 100).toFixed(2) + '% 이다.');
+            $('.five-percent').append('확률은' + (fivecount/input * 100).toFixed(2) + '% 이다.');
+            $('.six-percent').append('확률은' + (sixcount/input * 100).toFixed(2) + '% 이다.');
+
+            var array = [];
+            array.push(onecount);
+            array.push(twocount);
+            array.push(threecount);
+            array.push(fourcount);
+            array.push(fivecount);
+            array.push(sixcount);
+
+            var max = Math.max.apply(null, array);
+
+            if (max == onecount)
+            {
+                $('#one').css({
+                    color: 'blue'
+                });
+            }
+            else if (max == twocount)
+            {
+                $('#two').css({
+                    color: 'blue'
+                });
+            }
+            else if (max == threecount)
+            {
+                $('#three').css({
+                    color: 'blue'
+                });
+            }
+            else if (max == fourcount)
+            {
+                $('#four').css({
+                    color: 'blue'
+                });
+            }
+            else if (max == fivecount)
+            {
+                $('#five').css({
+                    color: 'blue'
+                });
+            }
+            else if (max == sixcount)
+            {
+                $('#six').css({
+                    color: 'blue'
+                });
+            }
+            
+        });  
+    </script>
+</head>
+<body>
+    <div id="one">
+        <h1>1은</h1>
+        <h1 class="one"></h1>
+        <h2 class="one-percent"></h2>
+    </div>
+    <div id="two">
+        <h1>2는</h1>
+        <h1 class="two"></h1>
+        <h2 class="two-percent"></h2>
+    </div>
+    <div id="three">
+        <h1>3는</h1>
+        <h1 class="three"></h1>
+        <h2 class="three-percent"></h2>  
+    </div>
+    <div id="four">
+        <h1>4는</h1>
+        <h1 class="four"></h1>
+        <h2 class="four-percent"></h2>
+    </div>
+    <div id="five">
+        <h1>5는</h1>
+        <h1 class="five"></h1>
+        <h2 class="five-percent"></h2>
+    </div>
+    <div id="six">
+        <h1>6는</h1>
+        <h1 class="six"></h1>
+        <h2 class="six-percent"></h2>
+    </div>
+
+</body>
+</html>

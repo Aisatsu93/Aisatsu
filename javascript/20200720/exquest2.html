@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function interval(num)
+        {
+            this.number = num;
+            this.inter1 = function()
+            {
+                return (this.number%10000 - this.number%1000)/1000 - (this.number%1000 - this.number%100)/100;
+            };
+            this.inter2 = function()
+            {
+                return (this.number%1000 - this.number%100)/100 - (this.number%100 - this.number%10)/10;
+            };
+            this.inter3 = function()
+            {
+                return (this.number%100 - this.number%10)/10 - this.number%10;
+            };
+        }
+
+
+        var input = Number(prompt('N값은? ', ''));
+        var count = 0;
+
+        for (var i = 1; i <= input; i++)
+        {
+            
+            var cal = new interval(i);
+            if (i < 100)
+            {
+                count += 1;
+            }
+            if (i >= 100 && i < 1000)
+            {
+                if (cal.inter2() == cal.inter3())
+                {
+                    count += 1;
+                }
+            }
+            if (i >= 1000)
+            {
+                if (cal.inter1() == cal.inter2() && cal.inter1() == cal.inter3())
+                {
+                    count += 1;
+                }
+            }
+        }
+        alert(count);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

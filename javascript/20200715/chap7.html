@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var student = 
+        // {
+        //     이름: '최지순',
+        //     나이: 19,
+        //     성별: '남',
+        //     성적: 'A+'
+        // }
+        
+        function makeStudent(name, age, gender, score)
+        {
+            var some = 
+            {
+                이름 = name,
+                나이 = age,
+                성별 = gender,
+                성적 = score
+            }
+            return some;
+        }
+
+        var stu = makeStudent('최지순', 19, '남', 'A+');
+
+        function Student(name, age, gender, score, teado)
+        {
+            this.이름 = name;
+            this.나이 = age;
+            this.성별 = gender;
+            this.프로그래밍성적 = score;
+            this.태도점수 = teado;
+            // this.toString = function()
+            // {
+            //     return "이름 : " + name + " 나이 : " + age;
+            // }
+            // this.getSum = function()
+            // {
+            //     return this.프로그래밍성적 + this.태도점수;
+            // }
+        }
+        Student.prototype.toString = function()
+        {
+            return "이름 : " + name + " 나이 : " + age;
+        }
+        Student.prototype.getSum = function()
+        {
+            return this.프로그래밍성적 + this.태도점수;
+        }
+
+        var student = new Student('최지순', 19, '남', 100, 10);
+
+        alert(student.이름);
+        alert(student.getSum());
+        // alert(student.getSum);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1번 문제
+        function test (a, b, c)
+        {
+            console.log(a);
+            console.log(a*b);
+            console.log(a*b*c);
+        }
+        test(10,100);
+
+        // 2번 문제
+        function power()
+        {
+            if (arguments.length == 1)
+            {
+                return arguments[0]*arguments[0];
+            }
+            else if (arguments.length == 2)
+            {
+                var output = 1;
+                for (var i = 0; i < arguments[arguments.length-1]; i++)
+                {
+                    output *= arguments[0];
+                }
+                return output;
+            }
+        }
+
+        console.log(power(2));
+        console.log(power(2,3));
+        
+        function power_book(a,b)
+        {
+            if (b)
+            {
+                var output = 1;
+                for (var i = 0; i < b; i++)
+                {
+                    output *= a;
+                }
+
+                return output;
+            }
+            else
+            {
+                return a*a;
+            }
+        }
+
+        console.log(power_book(2));
+        console.log(power_book(2,3));
+
+        function multiply()
+        {
+            var output = 1;
+            for (var i = 0; i <arguments.length; i++)
+            {
+                output *= arguments[i];
+            }
+            return output;
+        }
+        console.log(multiply(1,2,3,4,5));
+
+        // 4번 문제
+        var input = prompt('값을 입력받습니다.', '');
+        if(isNaN(input))
+        {
+            console.log('숫자 아님');
+        }
+        else
+        {
+            console.log('이거 숫자임');
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

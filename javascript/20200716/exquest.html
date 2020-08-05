@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function makeStudent(name, id, gender)
+        {
+            this.Name = name;
+            this.ID = id;
+            this.Gender = gender;
+
+            this.toString = function ()
+            {
+                return this.Name + '    ' + this.ID + '    ' + this.Gender + '\n';
+            };
+            this.changeID = function (number)
+            {
+                return this.ID = number;
+            }
+        }
+
+        var student1 = new makeStudent('이동준', 2009038033, '남');
+        var student2 = new makeStudent('안혜주', 2020038011, '여');
+        var student3 = new makeStudent('고한솔', 2015012011, '남');
+        var student4 = new makeStudent('안희령', 2017011023, '여');
+
+        var array = [];
+
+        array.push(student1);
+        array.push(student2);
+        array.push(student3);
+        array.push(student4);
+        
+        var output = '이름       학번             성별\n';
+        for (var i in array)
+        {
+            output += array[i].toString();
+        }
+        alert(output);
+
+        student1.changeID(2019038033);
+        
+        var output = '이름       학번             성별\n';
+        for (var i in array)
+        {
+            output += array[i].toString();
+        }
+        alert(output);
+
+        const idx = array.findIndex(((function(item) { return item.Name === '안혜주'})));
+        if (idx != -1)
+        {
+            array.splice(idx, 1);
+        }
+
+
+        var output = '이름       학번             성별\n';
+        for (var i in array)
+        {
+            output += array[i].toString();
+        }
+        alert(output);
+
+        var inputname = prompt('이름', '');
+        var inputid = Math.floor(Number(prompt('학번', '')));
+        var inputgender = prompt('성별', '');
+
+        var student5 = new makeStudent(inputname, inputid, inputgender);
+
+        var inputname2 = prompt('이름', '');
+        var inputid2 = Math.floor(Number(prompt('학번', '')));
+        var inputgender2 = prompt('성별', '');
+
+        var student6 = new makeStudent(inputname2, inputid2, inputgender2);
+
+        array.push(student5);
+        array.push(student6);
+
+        var output = '이름       학번             성별\n';
+        for (var i in array)
+        {
+            output += array[i].toString();
+        }
+        alert(output);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

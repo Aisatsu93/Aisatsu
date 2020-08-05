@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculate(num)
+        {
+            this.number = num;
+
+            this.toSum = function()
+            {
+                return this.number + (this.number%10) + ((this.number%100)-(this.number%10))/10 + ((this.number%1000)-(this.number%100))/100 + ((this.number%10000)-(this.number%1000))/1000;
+            };
+
+        }
+        
+        var input = Number(prompt('n은?', ''));
+        var cal = new calculate(input);
+        alert(cal.toSum());
+
+        var array = [];
+        for (var i = 1; i < 10000; i++)
+        {
+            var cal2 = new calculate(i);
+            array.push(cal2.toSum());
+        }
+
+        var array2 = [];
+        
+        for (var i = 1; i < 10000; i++)
+        {
+            const idx = array.findIndex((item, idx) => 
+            { 
+                return item === i;
+            });
+            if (idx == -1)
+            {
+                array2.push(i);
+            }
+        }
+        
+        alert(array2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

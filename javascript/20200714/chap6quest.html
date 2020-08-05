@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1번 문제
+        var table = 
+        {
+            이름: 'Nature of Code',
+            가격: '30000원',
+            저자: '다니엘 쉬프만',
+            ISBN: 9788968481901,
+            페이지수: '620페이지'
+        }
+
+        var output = '속성          값\n';
+        for (var i in table)
+        {
+            output += i + '         ' + table[i] + '\n';
+        }
+        alert(output);
+
+        // 2번 문제
+        function makearray(name, minenal, gas, supply)
+        {
+            var table = {
+            
+                이름: name,
+                미네랄: minenal,
+                가스: gas,
+                보급품: supply,
+
+                toString: function()
+                {
+                    return this.이름 + '\t' + this.미네랄 + '\t' + this.가스 + '\t' + this.보급품;
+                }
+            };
+            return table;
+        }
+        
+        var array = [];
+        array.push (makearray('일벌레', 50, 0, 1));
+        array.push (makearray('여왕', 150, 0, 2));
+        array.push (makearray('바퀴', 75, 25, 2));
+        array.push (makearray('히드라리스크', 100, 50, 2));
+        array.push (makearray('타락귀', 150, 100, 2));
+            
+        var output2 = '이름'+'\t'+'미네랄'+'\t'+'가스'+'\t'+'보급품'+'\n';
+        for (var i in array)
+        {
+            output2 += array[i].toString() + '\n';
+        }
+        alert(output2);
+
+        // 3번 문제
+        let object = {
+            "+": 1,
+            "-": 2,
+            "*": 3,
+            "/": 4
+        };
+        alert(object.+);
+        alert(object.-);
+        alert(object.*);
+        alert(object./);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

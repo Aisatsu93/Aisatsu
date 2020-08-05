@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var output = "안녕하세요".indexOf("안녕");
+        alert(output);
+
+        var input = prompt('숫자입력해라~~~', '');
+        var Number = Number(input);
+
+        (Number>0) ? alert('자연수') : alert('자연수아님');
+
+        // 짧은 조건문 (page 89)
+        true || alert('실행될까?');
+        false || alert('실행되겠지?');
+
+        true && alert ('될꺼?');
+        false && alert('되겠지???');
+
+        var _example = 5;
+        _example % 2 == 0 || alert('홀수입니다.');
+        _example % 2 == 0 && alert('짝수입니다.');
+
+        var score = Number(prompt('학점은?', ''));
+        // 4.0을 넘고 4.5미만인 학생을 출력하시오.
+        // if(score > 4.0 && score <4.5)
+
+        var hul = 100;
+        hul = 200;
+        //200 = hul;
+
+        if (200 == hul)
+        {
+            alert("헐1");
+        }
+        if(hul == 200)
+        {
+            alert("헐2");
+        }
+
+
+        if (4.0 < score && score < 4.5)
+        {
+            alert("공부 좀 하는데?");
+        }
+        else if(score == 4.5)
+        {
+            alert("ㄷㄷㄷ");
+        }
+        else
+        {
+            alert(score);
+        }
+
+        var key = Number(prompt('숫자 입력해', '0'));
+
+        switch (key%2)
+        {
+            case 0:
+                alert("짝");
+                break;
+            case 1:
+                alert("홀");
+                break;
+            default:
+                alert('숫자 아님');
+                break;
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

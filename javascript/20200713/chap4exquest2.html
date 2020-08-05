@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var input1 = Number(prompt("1번째 숫자", ''));
+        var input2 = Number(prompt("2번째 숫자", ''));
+
+        var one = 0;
+        one = input1 * (input2%10);
+        alert(one);
+
+        var two = 0;
+        two = (input1 * ((input2 % 100) - (input2 % 10)))/10;
+        alert(two);
+
+        var three = 0;
+        three = (input1 * (input2 - (input2 % 100)))/100;
+        alert(three);
+
+        var four = 0;
+        four = input1 * input2;
+        alert(four);
+
+        var input3 = prompt("1번째 숫자", '');
+        var input4 = prompt("2번째 숫자", '');
+        
+
+        var five = '';
+        five = input3 * (input4.charAt(2));
+        alert(five);
+
+        var six = '';
+        six = input3 * (input4.charAt(1));
+        alert(six);
+
+        var seven = '';
+        seven = input3 * (input4.charAt(0));
+        alert(seven);
+
+        var eight = '';
+        eight = input3 * input4;
+        alert(eight);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

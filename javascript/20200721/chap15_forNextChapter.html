@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .box {
+            width: 60px;
+            height: 60px;
+            background-color: aqua;
+            float: left;
+            margin: 15px;
+            border: 4px solid black;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#hide").click(function() {
+                $(".box").hide();
+            });
+
+            $("#show").click(function() {
+                $(".box").show();
+            });
+
+        })
+    </script>
+</head>
+
+<body>
+    <div class="box"></div>
+    <button id="hide">hide</button>
+    <button id="show">show</button>
+</body>
+
+</html>

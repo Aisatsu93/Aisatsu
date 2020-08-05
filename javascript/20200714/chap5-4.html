@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function pita(w, h) {
+
+            function square(x) {
+                return x * x;
+            }
+            return Math.sqrt(square(w) + square(h));
+            //return Math.sqrt(w*w + h*h);
+        }
+
+        alert(pita(3, 4));
+
+        function square(w, h, hypotenuse) //삼각형의 직각 여부를 체크하는 함수
+        {
+            if (w * w + h * h == hypotenuse * hypotenuse) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

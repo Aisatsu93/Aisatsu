@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- <script src="http://code.jquery.com/jquery-3.1.1.js"></script> -->
+    
+    <script>
+        $(document).ready(function()
+        {
+            var sun = $('#sun').css({
+                position: 'absolute',
+                left: 250,
+                top: 200
+            });
+            var earth = $('#earth').css({ 
+                position: 'absolute'
+            });
+            var moon = $('#moon').css({
+                position: 'absolute'
+            });
+            
+            var earthAngle = 0;
+            var moonAngle = 0;
+            setInterval(function() {
+                
+                var earthleft = 250 + 150 * Math.cos(earthAngle);
+                var earthtop = 200 + 150 * Math.sin(earthAngle);
+                var moonleft = earthleft + 50 * Math.cos(moonAngle);
+                var moontop = earthtop + 50 * Math.sin(moonAngle);
+                earth.css({ 
+                    left: earthleft,
+                    top: earthtop
+                });
+                moon.css({
+                    left: moonleft,
+                    top: moontop
+                });
+
+                earthAngle += 0.1;
+                moonAngle += 0.3;
+
+            }, 1000 / 30);
+        });
+    </script>
+</head>
+<body>
+    <h1 id="sun">@</h1>
+    <h1 id="earth">O</h1>
+    <h1 id="moon">*</h1>
+</body>
+</html>

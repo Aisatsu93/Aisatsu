@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var array = ['ㄱ', 'ㄴ', 'ㄷ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅅ', 'ㅇ', 'ㅈ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ', 'ㅏ', 'ㅑ', 'ㅓ', 'ㅕ', 'ㅗ', 'ㅛ',
+            'ㅜ', 'ㅠ', 'ㅡ', 'ㅣ'
+        ];
+        var input = prompt("입력", '');
+
+        var sent = '';
+
+
+        for (var i = 0; i < input.length; i++) {
+            sent += array[input.charCodeAt(i) - 97];
+        }
+
+        alert(sent);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var smartPhones = ['iphone', 'ipod', 'android'];
+        for (var i in smartPhones) {
+            if (navigator.userAgent.toLowerCase().match(new RegExp(smartPhones[i]))) {
+                alert('스마트폰 페이지로 이동합니다');
+                location = 'https://m.naver.com';
+            } else {
+                alert('pc 페이지로 이동합니다');
+                location = 'https://naver.com';
+            }
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
